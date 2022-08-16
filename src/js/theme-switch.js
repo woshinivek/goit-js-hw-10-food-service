@@ -30,12 +30,13 @@ function setThemeColor() {
 }
 
 function setDarkTheme() {
-  document.body.classList.remove(Theme.LIGHT);
-  document.body.classList.add(Theme.DARK);
+  document.body.classList.replace(Theme.LIGHT, Theme.DARK);
+
   localStorage.setItem('theme', Theme.DARK);
 }
 
 function setLightTheme() {
   document.body.classList.replace(Theme.DARK, Theme.LIGHT);
+
   localStorage.setItem('theme', Theme.LIGHT);
 }
